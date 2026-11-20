@@ -13,8 +13,7 @@
 //   cyan selected states         -> colorScheme.primaryContainer (mint)
 //   delete icons                 -> colorScheme.error
 //   cooldown warnings            -> colorScheme.tertiaryContainer (blush)
-
-package com.bsub.translator.ui.theme
+package com.example.ui.theme
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -186,7 +185,7 @@ object BSubShape {
     val petalSmall = RoundedCornerShape(topStart = 16.dp, topEnd = 16.dp, bottomEnd = 16.dp, bottomStart = 4.dp)
 }
 
-private val BSubShapes = Shapes(
+val BSubShapes = Shapes(
     extraSmall = RoundedCornerShape(8.dp),
     small = RoundedCornerShape(12.dp),
     medium = RoundedCornerShape(14.dp),   // segmented controls, text fields, tonal buttons
@@ -307,3 +306,8 @@ fun BSubProgressBar(progress: Float, modifier: Modifier = Modifier) {
         }
     }
 }
+
+// Compatibility aliases required by ThemeProvider.kt
+internal val BSubDarkColorScheme = DarkColors
+
+internal val BSubLightColorScheme = LightColors
