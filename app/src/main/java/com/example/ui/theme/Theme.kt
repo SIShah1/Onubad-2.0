@@ -200,7 +200,7 @@ val BSubShapes = Shapes(
 private val Sans = FontFamily.SansSerif
 val BSubMono = FontFamily.Monospace   // counts, file names, logs, model names
 
-private val BSubTypography = Typography(
+private val BSubThemeTypography = Typography(
     displaySmall = TextStyle(fontFamily = Sans, fontWeight = FontWeight.Medium, fontSize = 28.sp, lineHeight = 34.sp, letterSpacing = (-0.4).sp),
     headlineMedium = TextStyle(fontFamily = Sans, fontWeight = FontWeight.Medium, fontSize = 24.sp, lineHeight = 30.sp, letterSpacing = (-0.3).sp),
     headlineSmall = TextStyle(fontFamily = Sans, fontWeight = FontWeight.Medium, fontSize = 21.sp, lineHeight = 27.sp, letterSpacing = (-0.3).sp),
@@ -227,7 +227,7 @@ fun BSubTheme(
     CompositionLocalProvider(LocalBSubExtras provides extras) {
         MaterialTheme(
             colorScheme = colors,
-            typography = BSubTypography,
+            typography = BSubThemeTypography,
             shapes = BSubShapes,
             content = content,
         )
