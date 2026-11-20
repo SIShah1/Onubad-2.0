@@ -121,14 +121,14 @@ fun ApiKeysScreen(
         )
         StatusPill(
           text = "Active: $activeCount",
-          containerColor = MaterialTheme.colorScheme.tertiaryContainer,
-          contentColor = MaterialTheme.colorScheme.onTertiaryContainer,
+          containerColor = MaterialTheme.colorScheme.primaryContainer,
+          contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
         )
         if (exhaustedCount > 0) {
           StatusPill(
             text = "Exhausted: $exhaustedCount",
-            containerColor = MaterialTheme.colorScheme.primaryContainer,
-            contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
+            containerColor = MaterialTheme.colorScheme.tertiaryContainer,
+            contentColor = MaterialTheme.colorScheme.onTertiaryContainer,
           )
         }
         if (invalidCount > 0) {
@@ -337,14 +337,14 @@ private fun ApiKeyRow(
     when (entry.status) {
       ApiKeyStatus.ACTIVE ->
         Triple(
-          MaterialTheme.colorScheme.tertiaryContainer,
-          MaterialTheme.colorScheme.onTertiaryContainer,
+          MaterialTheme.colorScheme.primaryContainer,
+          MaterialTheme.colorScheme.onPrimaryContainer,
           "ACTIVE",
         )
       ApiKeyStatus.QUOTA_EXHAUSTED ->
         Triple(
-          MaterialTheme.colorScheme.primaryContainer,
-          MaterialTheme.colorScheme.onPrimaryContainer,
+          MaterialTheme.colorScheme.tertiaryContainer,
+          MaterialTheme.colorScheme.onTertiaryContainer,
           "QUOTA",
         )
       ApiKeyStatus.INVALID ->
